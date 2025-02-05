@@ -14,7 +14,7 @@ menuLinks.forEach(link => {
   if (currentPath === '/' || currentPath === '/index.html') {
     // For index page, highlight based on hash
     if (currentHash && currentHash === linkHash) {
-      link.classList.add('active');
+      // link.classList.add('active');
     }
   } else {
     // For other pages, highlight based on pathname
