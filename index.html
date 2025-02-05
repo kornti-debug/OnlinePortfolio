@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <nav class="nav">
+            <div class="nav-div_logo">
+                <a href="index.html"><img class="logo-img" src="images/g24.png" alt="Logo_Header"></a>
+            </div>
+            <ul class="nav-ul_menu">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+
+            <label for="menu-toggle">
+                <img class="logo-img nav-div_burger" src="images/Mobile_Nav_Burger.png" alt="Logo_Header">
+            </label>
+        </nav>
+        <nav class="mobile-menu">
+            <ul class="mobile-menu-ul">
+                <li>
+                    <a href="#about-section" class="menu-link">About</a>
+                </li>
+                <li>
+                    <a href="/pages/projects.html" class="menu-link">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact-section" class="menu-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <main>
+            <section class="welcome-section" id="welcome-section">
+                <div class="welcome-div">
+                    <h1>
+                        <span class="name">Hi, I am Lukas!</span>
+                    </h1>
+                    <br>
+                    <p>
+                        A creative Designer and Developer with a passion for creating simple and engaging digital
+                        solutions.
+                    </p>
+                </div>
+                <div class="avatar-div">
+                    <img class="avatar-img" src="images/g211.png" alt="laptop">
+                </div>
+            </section>
+            <div class="spacer">
+                <a href="#about-section"><img class="arrow" src="images/arrow-down.svg" alt="scrolldown"></a>
+            </div>
+            <section class="about-section" id="about-section">
+                <h2>ABOUT ME</h2>
+                <div class="about-container">
+                    <div class="about-text">
+                        <p>
+                            Hello there! My name is Lukas Korntner, I am a designer and developer based in Vienna,
+                            Austria.
+                        </p>
+                        <br>
+                        <p>
+                            My design philosophy is about creating simple and engaging digital solutions that are
+                            responsive and accessible.
+                        </p>
+                        <br>
+                        <p>
+                            With my background as an IT technician, I bring additional expertise in networking and
+                            business operations.
+                        </p>
+                        <br>
+                        <p>
+                            I focus on combining coding and design skills to deliver modern, well-coded solutions for my
+                            clients.
+                        </p>
+                    </div>
+                    <div class="avatar-div">
+                        <img class="about-img" src="images/about-me.svg" alt="about-me">
+                    </div>
+                </div>
+            </section>
+            <section class="project-section">
+                <h2>PROJECTS</h2>
+                <p>Here are my different projects.</p>
+
+                <div class="project-container">
+                    <h3>Project A: Text adventure game</h3>
+                    <div class="project-picture">
+                        <img class="arrow-side" src="images/arrow-left.svg" alt="scrolldown">
+                        <img class="project-img" src="/images/mining_game_croped.png" alt="projects">
+                        <img class="arrow-side" src="images/arrow-right.svg" alt="scrolldown">
+                    </div>
+                    <a class="project-link" href="/pages/projects.html">read more</a>
+                </div>
+            </section>
+            <section class="skill-section">
+                <h2>TOOLKIT</h2>
+                <div class="skill-list">
+                    <ul class="skill-ul">
+                        <li>
+                            <span class="tool-text">HTML</span>
+                            <img src="images/html_svg.svg" alt="html5">
+                        </li>
+                        <li>
+                            <span class="tool-text">CSS</span>
+                            <img src="images/css_svg.svg" alt="css3">
+                        </li>
+                        <li>
+                            <span class="tool-text">Javascript</span>
+                            <img src="images/js_svg.svg" alt="javascript">
+                        </li>
+                        <li>
+                            <span class="tool-text">VS Code</span>
+                            <img src="images/Vector.svg" alt="html5">
+                        </li>
+                        <li>
+                            <span class="tool-text">Figma</span>
+                            <img src="images/figma_sv.svg" alt="css3">
+                        </li>
+                        <li>
+                            <span class="tool-text">Creative Cloud</span>
+                            <img src="images/creative-cloud-cc-logo-black-and-white.png" alt="javascript">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contact-section" id="contact-section">
+                <h2>CONTACT ME</h2>
+                <div class="contact-container">
+                    <form class="contact-form">
+                        <input type="text" name="name" id="name" placeholder="your name">
+                        <input type="text" name="email" id="email" placeholder="your email">
+                        <textarea name="msg" id="msg" placeholder="your text"></textarea>
+                        <button id="form-submit">send</button>
+                    </form>
+                    <div class="contact-text">
+                        <p>If you have any question about my work or want to contact me you can send me a message.</p>
+                        <p>Just fill out the contactform or get in touch with me via social media.</p>
+                        <p>Thanks for stopping by!</p>
+                    </div>
+                </div>
+            </section>
+            <div class="spacer">
+                <a href="#welcome-section"><img class="arrow" src="images/arrow-up.svg" alt="scrolldown"></a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>made with HTML and CSS</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

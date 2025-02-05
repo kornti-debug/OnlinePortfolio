@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="175.22461"
+   height="95.171356"
+   viewBox="0 0 175.22461 95.171356"
+   preserveAspectRatio="xMidYMid"
+   id="svg1608"
+   sodipodi:docname="g9.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1608">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1611"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1609"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1608"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g1611"
+     style="fill:#000000"
+     transform="translate(821.79071,450.52762)">
+    <g
+       id="g1612">
+      <path
+         style="fill:#37c8ab;fill-opacity:1;stroke:#37c8ab;stroke-width:15.118;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m -839.06104,-440.93514 c 26.68443,26.68443 53.36885,53.36885 80.05328,80.05328"
+         id="path1609"
+         inkscape:path-effect="#path-effect1609"
+         inkscape:original-d="m -839.06104,-440.93514 c 26.68443,26.68443 53.36885,53.36885 80.05328,80.05328"
+         transform="translate(24.829357,-2.0334387)" />
+      <path
+         style="fill:#ff7f2a;fill-opacity:1;stroke:#37c8ab;stroke-width:15.1181;stroke-linecap:round;stroke-opacity:1"
+         d="m -839.06104,-440.93514 c 26.68443,26.68443 53.36885,53.36885 80.05328,80.05328"
+         id="path1610"
+         inkscape:path-effect="#path-effect1611"
+         inkscape:original-d="m -839.06104,-440.93514 c 26.68443,26.68443 53.36885,53.36885 80.05328,80.05328"
+         transform="matrix(-1,0,0,1,-1493.1862,-2.0334387)" />
+    </g>
+  </g>
+</svg>
