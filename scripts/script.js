@@ -1,71 +1,52 @@
-// Get all menu links (both desktop & mobile)
+// Get menu toggle button (for mobile) and all navigation links
 const menuToggle = document.getElementById("menu-toggle");
 const menuLinks = document.querySelectorAll(".menu-link, .nav-ul_menu a");
 
-// Function to update active links
+// Function to highlight the active link
 function updateActiveLink() {
   const currentPath = window.location.pathname;
   const currentHash = window.location.hash;
 
-  // Remove active class from all links
+  // Remove 'active' from all links
   menuLinks.forEach(link => link.classList.remove("active"));
 
-  let foundActive = false; // Ensure only one link gets activated
-
+  // Loop through links and find the one that matches the current URL
   menuLinks.forEach(link => {
-    const linkPath = link.pathname;
-    const linkHash = link.hash;
-
-    // Highlight project link based on pathname
-    if (currentPath === linkPath && !linkHash) {
+    if (
+      (link.pathname === currentPath && !link.hash) || 
+      (currentHash && link.hash === currentHash)
+    ) {
       highlightMatchingLinks(link);
-      foundActive = true;
-    }
-
-    // Highlight hash-based links only when they match
-    if (!foundActive && currentHash && currentHash === linkHash) {
-      highlightMatchingLinks(link);
-      foundActive = true;
     }
   });
 }
 
-// Function to highlight all matching links (fix for desktop & mobile menus)
+// Function to highlight all matching links (handles mobile & desktop menus)
 function highlightMatchingLinks(activeLink) {
-  const activeText = activeLink.innerText.trim().toLowerCase();
+  const linkText = activeLink.innerText.trim().toLowerCase();
 
-  // Find all links with the same text and highlight them
   menuLinks.forEach(link => {
-    if (link.innerText.trim().toLowerCase() === activeText) {
+    if (link.innerText.trim().toLowerCase() === linkText) {
       link.classList.add("active");
     }
   });
 }
 
-// Function to handle clicks on menu links
-function handleMenuClick(event) {
-  const clickedLink = event.currentTarget;
+// Handle menu link clicks
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    highlightMatchingLinks(link);
 
-  // Remove active class from all links
-  menuLinks.forEach(menuLink => menuLink.classList.remove("active"));
+    // Close mobile menu if it's open
+    if (menuToggle) {
+      menuToggle.checked = false;
+    }
 
-  // Add active class to all matching links (desktop & mobile)
-  highlightMatchingLinks(clickedLink);
+    // Small delay to ensure hash updates correctly
+    setTimeout(updateActiveLink, 10);
+  });
+});
 
-  // Close mobile menu if it's open
-  if (menuToggle) {
-    menuToggle.checked = false;
-  }
-
-  // Ensure hash-based links are updated immediately
-  setTimeout(updateActiveLink, 10);
-}
-
-// Run function on page load
+// Update active link when the page loads or hash changes
 document.addEventListener("DOMContentLoaded", updateActiveLink);
-
-// Handle click event for menu links
-menuLinks.forEach(link => link.addEventListener("click", handleMenuClick));
-
-// Handle URL hash changes dynamically
 window.addEventListener("hashchange", updateActiveLink);
