@@ -1,8 +1,8 @@
-// Get all menu links
+// Get all menu links (both desktop & mobile)
 const menuToggle = document.getElementById("menu-toggle");
 const menuLinks = document.querySelectorAll(".menu-link, .nav-ul_menu a");
 
-// Function to update active link
+// Function to update active links
 function updateActiveLink() {
   const currentPath = window.location.pathname;
   const currentHash = window.location.hash;
@@ -18,14 +18,26 @@ function updateActiveLink() {
 
     // Highlight project link based on pathname
     if (currentPath === linkPath && !linkHash) {
-      link.classList.add("active");
+      highlightMatchingLinks(link);
       foundActive = true;
     }
 
     // Highlight hash-based links only when they match
     if (!foundActive && currentHash && currentHash === linkHash) {
-      link.classList.add("active");
+      highlightMatchingLinks(link);
       foundActive = true;
+    }
+  });
+}
+
+// Function to highlight all matching links (fix for desktop & mobile menus)
+function highlightMatchingLinks(activeLink) {
+  const activeText = activeLink.innerText.trim().toLowerCase();
+
+  // Find all links with the same text and highlight them
+  menuLinks.forEach(link => {
+    if (link.innerText.trim().toLowerCase() === activeText) {
+      link.classList.add("active");
     }
   });
 }
@@ -36,19 +48,17 @@ function handleMenuClick(event) {
 
   // Remove active class from all links
   menuLinks.forEach(menuLink => menuLink.classList.remove("active"));
-  
-  // Add active class to clicked link (only if it's not a hash link)
-  if (!clickedLink.hash) {
-    clickedLink.classList.add("active");
-  }
+
+  // Add active class to all matching links (desktop & mobile)
+  highlightMatchingLinks(clickedLink);
 
   // Close mobile menu if it's open
   if (menuToggle) {
     menuToggle.checked = false;
   }
 
-  // Delay updating hash-based links to ensure correct highlighting
-  setTimeout(updateActiveLink, 50);
+  // Ensure hash-based links are updated immediately
+  setTimeout(updateActiveLink, 10);
 }
 
 // Run function on page load
