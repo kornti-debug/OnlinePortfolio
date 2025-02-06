@@ -38,8 +38,8 @@
 // });
 
 // Get all menu links
-const menuToggle = document.getElementById('menu-toggle');
-const menuLinks = document.querySelectorAll('.menu-link, .nav-ul_menu a');
+const menuToggle = document.getElementById("menu-toggle");
+const menuLinks = document.querySelectorAll(".menu-link, .nav-ul_menu a");
 
 // Function to update active link
 function updateActiveLink() {
@@ -52,17 +52,20 @@ function updateActiveLink() {
     const linkHash = link.hash;
 
     // Remove 'active' class from all links
-    link.classList.remove('active');
+    link.classList.remove("active");
+
+    // Prevent auto-highlighting when no hash is in the URL
+    if (!currentHash) return;
 
     // If on index page, highlight based on hash
-    if (currentPath === '/' || currentPath.endsWith('/index.html')) {
-      if (currentHash && currentHash === linkHash) {
-        link.classList.add('active');
+    if (currentPath === "/" || currentPath.endsWith("/index.html")) {
+      if (currentHash === linkHash) {
+        link.classList.add("active");
       }
     } else {
       // Highlight based on pathname for other pages
       if (linkPath === currentPath) {
-        link.classList.add('active');
+        link.classList.add("active");
       }
     }
   });
@@ -73,11 +76,11 @@ document.addEventListener("DOMContentLoaded", updateActiveLink);
 
 // Handle click event for smooth toggling
 menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener("click", () => {
     // Remove active class from all links
-    menuLinks.forEach(menuLink => menuLink.classList.remove('active'));
+    menuLinks.forEach(menuLink => menuLink.classList.remove("active"));
     // Add active class to clicked link
-    link.classList.add('active');
+    link.classList.add("active");
 
     // Close menu (if applicable)
     if (menuToggle) {
@@ -86,5 +89,5 @@ menuLinks.forEach(link => {
   });
 });
 
-// Handle URL hash changes (when clicking on section links)
+// Handle URL hash changes dynamically
 window.addEventListener("hashchange", updateActiveLink);
