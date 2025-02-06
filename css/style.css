@@ -398,7 +398,6 @@ footer {
 }
 
 .project-site-picture img {
-    height: 200px;
     width: 400px;
 }
 
@@ -420,7 +419,7 @@ footer {
 .project-site-link-div {
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
+    width: 80%;
 }
 
 .project-site-text-ul-li img {
