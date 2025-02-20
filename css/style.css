@@ -712,6 +712,10 @@ footer {
         display: none;
     }
 
+    .project-slider{
+        margin: 0;
+    }
+
     .contact-form {
         width: 100%;
     }
