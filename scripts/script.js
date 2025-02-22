@@ -25,11 +25,15 @@ if (slider && prevArrow && nextArrow) {
         let slideWidth = slider.clientWidth;
         let activeIndex = Math.round(scrollLeft / slideWidth); // Find the closest slide index
 
+        if (activeIndex < 0 || activeIndex >= slides.length) return;
+
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === activeIndex);
         });
 
-        projectTitle.textContent = slides[activeIndex].alt;
+        if (slides[activeIndex]) {
+            projectTitle.textContent = slides[activeIndex].alt;
+        }
     }
 
     // Detect scrolling to update active dot
