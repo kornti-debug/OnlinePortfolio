@@ -13,7 +13,7 @@ Online Portfolio of myself. Including all Projects, skills and ideas
 ## 📸 **Screenshots**
 
 <div style="text-align: center;">
-  <img src="screenshots/onlineportfolio_welcome.png" alt="welcome page" width="600">
+  <img src="screenshots/onilneportfolio_welcome.png" alt="welcome page" width="600">
  </div>
  <div style="text-align: center;">
   <img src="screenshots/onlineportfolio_projects.png" alt="projects page" width="600">
