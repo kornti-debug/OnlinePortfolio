@@ -6,7 +6,7 @@ Online Portfolio of myself. Including all Projects, skills and ideas
 ---
 
 ## 🌐 **Link to my page**
-[Click here to play the game!](https://kornti-debug.github.io/OnlinePortfolio/)
+[Click here to visit my Homepage!](https://kornti-debug.github.io/OnlinePortfolio/)
 
 ---
 
